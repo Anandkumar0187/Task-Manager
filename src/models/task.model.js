@@ -7,6 +7,7 @@ const TaskSchema = new Schema({
   },
   description: {
     type: String,
+    required: true,
   },
   dueDate: {
     type: Date,
@@ -22,6 +23,11 @@ const TaskSchema = new Schema({
     enum : [0, 20, 40, 60, 80, 100],
     default: 0,
   },
-});
+  user: {
+    type : Schema.Types.ObjectId,
+    ref : "User",
+    required: true,
+  }
+},{timestamps : true});
 
 export const Task = mongoose.model('Task', TaskSchema);

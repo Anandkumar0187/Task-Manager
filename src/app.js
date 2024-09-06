@@ -16,9 +16,11 @@ app.use(express.static("public"));
 
 //routes import
 import taskRouter from  "./routes/task.routes.js";
+import userRouter from "./routes/user.routes.js"
 
 //routes declaration
 app.use("/api/v1", taskRouter);
+app.use("/api/v1",userRouter);
 //http://localhost:8080/api/v1/...
 
 export { app }
