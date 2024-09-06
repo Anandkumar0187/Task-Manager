@@ -44,7 +44,6 @@ Make sure you have the following installed:
     Create a `.env` file in the root of the `backend` directory with the following content:
     ```bash
     PORT=8080
-    MONGODB_URI=mongodb+srv://Anand:Anandkumar@cluster0.wvgskol.mongodb.net
 
     ACCESS_TOKEN_SECERET=JaiShreeKrishna
     ACCESS_TOKEN_EXPIRY=1d
