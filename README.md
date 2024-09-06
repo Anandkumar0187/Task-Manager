@@ -1,41 +1,57 @@
-# Task Management Application
+# Task Management Application - Backend
 
-A full-stack task management application built using the **MERN stack** (MongoDB, Express.js, React, Node.js). The app allows users to create, update, delete, and organize tasks effectively, with an additional analytical dashboard to visualize task distribution, completion rates, and upcoming deadlines.
+This is the backend of the Task Management Application built with **Node.js**, **Express.js**, and **MongoDB**. The backend provides a RESTful API for managing tasks, with features such as user authentication via **JWT**, CRUD operations on tasks, and secure route protection.
 
 ## Features
+- **JWT Authentication**: Users can log in and access protected routes.
+- **CRUD Operations**: Create, Read, Update, and Delete tasks.
+- **Task Filtering and Sorting**: Based on task priority and due dates.
+- **Task Completion Status**: Mark tasks as completed or pending.
+- **Mongoose Integration**: MongoDB schema and interaction using **Mongoose**.
+- **Input Validation**: Validate user input using **express-validator**.
 
-### 1. Task Management
-- **Create Task**: Add tasks with a title, description, due date, and priority (High, Medium, Low).
-- **View Tasks**: Display a list of tasks with options to sort by due date or priority.
-- **Edit Task**: Modify the details of existing tasks.
-- **Delete Task**: Remove tasks from the list.
-- **Task Details**: View task details in a separate view.
-- **Task Completion**: Mark tasks as completed.
-- **Task Filtering**: Filter tasks based on completion status (pending or completed).
-- **Search**: Search for tasks by title.
+## Technologies
+- **Node.js** with **Express.js** for server-side logic.
+- **MongoDB** as the database.
+- **Mongoose** for MongoDB object modeling.
+- **express-validator** for input validation.
+- **JWT (JSON Web Token)** for secure authentication.
+- **bcrypt.js** for password hashing.
+- **dotenv** for environment variable management.
 
-### 2. Analytical Dashboard
-- **Task Distribution**: View task distribution by priority level (Pie or Bar Chart).
-- **Completion Rate**: Visualize task completion over time.
-- **Upcoming Deadlines**: Calendar view highlighting tasks with upcoming deadlines.
-
-### 3. Responsive Design
-- The app is responsive and works on various screen sizes.
-
-## Tech Stack
-
-- **Frontend**: React.js, Material UI (MUI), Chart.js, React-Calendar.
-- **Backend**: Node.js, Express.js, MongoDB, Mongoose.
-- **API Design**: RESTful API.
-
-## Installation
+## Getting Started
 
 ### Prerequisites
-Ensure you have the following installed on your machine:
-- Node.js
-- MongoDB (running locally or hosted)
-- Git
+Make sure you have the following installed:
+- **Node.js** (v14 or above)
+- **MongoDB** (v4 or above)
+- **npm** (v6 or above)
 
-### 1. Clone the repository
-```bash
-# git clone https://github.com/your-username/task-management-app.git
+### Installation
+
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/Anandkumar0187/Task-Manager-Backend.git
+    cd Task_Manager_backend
+    ```
+
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+3. **Environment variables**:
+    Create a `.env` file in the root of the `backend` directory with the following content:
+    ```bash
+    PORT=8080
+    MONGODB_URI=mongodb+srv://Anand:Anandkumar@cluster0.wvgskol.mongodb.net
+
+    ACCESS_TOKEN_SECERET=JaiShreeKrishna
+    ACCESS_TOKEN_EXPIRY=1d
+    ```
+
+4. **Running the server**:
+    - **Development mode**:
+      ```bash
+      npm run dev
+      ```
